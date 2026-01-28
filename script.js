@@ -1,84 +1,106 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Header Scroll Effect
-    const header = document.querySelector('.nav-wrapper');
+    // Custom Cursor
+    const cursor = document.querySelector('.custom-cursor');
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    // Handle hover states for cursor
+    const interactiveElements = document.querySelectorAll('a, button, .bento-item, .comparison-container');
+    interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursor.style.transform = 'scale(4)';
+            cursor.style.background = 'rgba(202, 138, 4, 0.2)';
+            cursor.style.border = '1px solid var(--accent)';
+        });
+        el.addEventListener('mouseleave', () => {
+            cursor.style.transform = 'scale(1)';
+            cursor.style.background = 'var(--accent)';
+            cursor.style.border = 'none';
+        });
+    });
+
+    // Parallax Effect
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-            header.style.padding = '0.5rem 2rem';
+        const scroll = window.pageYOffset;
+        const heroImg = document.getElementById('hero-img');
+        if (heroImg) {
+            heroImg.style.transform = `scale(1.1) translateY(${scroll * 0.4}px)`;
+        }
+
+        // Header scroll effect
+        const header = document.querySelector('.main-header');
+        if (scroll > 100) {
+            header.style.padding = '1rem 0';
         } else {
-            header.style.background = 'rgba(255, 255, 255, 0.8)';
-            header.style.padding = '0.8rem 2rem';
+            header.style.padding = '2rem 0';
         }
     });
 
-    // Mobile Menu Toggle (Simplified)
-    const mobileToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            // Basic active styles for mobile
-            if (navLinks.classList.contains('active')) {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '80px';
-                navLinks.style.left = '20px';
-                navLinks.style.right = '20px';
-                navLinks.style.background = 'white';
-                navLinks.style.padding = '2rem';
-                navLinks.style.borderRadius = '24px';
-                navLinks.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
-            } else {
-                navLinks.style.display = 'none';
-            }
-        });
-    }
-
-    // Scroll Revel Animation (Simple)
+    // Reveal on Scroll
     const observerOptions = {
-        threshold: 0.1
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('active');
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.glass-card, .service-card').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)';
+    document.querySelectorAll('.reveal').forEach(el => {
         observer.observe(el);
     });
 
-    // Form Submission
-    const form = document.querySelector('.contact-form');
+    // Before/After Slider
+    const container = document.getElementById('comparison');
+    const afterImg = document.getElementById('after-img');
+    const handle = document.getElementById('handle');
+
+    if (container) {
+        container.addEventListener('mousemove', (e) => {
+            const rect = container.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const percent = (x / rect.width) * 100;
+
+            if (percent >= 0 && percent <= 100) {
+                afterImg.style.width = percent + '%';
+                handle.style.left = percent + '%';
+            }
+        });
+
+        // Touch support
+        container.addEventListener('touchmove', (e) => {
+            const rect = container.getBoundingClientRect();
+            const x = e.touches[0].clientX - rect.left;
+            const percent = (x / rect.width) * 100;
+
+            if (percent >= 0 && percent <= 100) {
+                afterImg.style.width = percent + '%';
+                handle.style.left = percent + '%';
+            }
+        });
+    }
+
+    // Smooth Inquire Button
+    const form = document.querySelector('form');
     if (form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             const btn = form.querySelector('button');
-            const originalText = btn.textContent;
-            
-            btn.textContent = 'Sending...';
+            btn.textContent = 'Curating Request...';
             btn.disabled = true;
 
             setTimeout(() => {
-                btn.textContent = 'Quote Requested! 🐃';
-                btn.style.background = '#0369A1';
+                btn.textContent = 'Inquiry Received';
+                btn.style.background = '#14532D';
+                btn.style.color = '#fff';
                 form.reset();
-                
-                setTimeout(() => {
-                    btn.textContent = originalText;
-                    btn.disabled = false;
-                    btn.style.background = '';
-                }, 3000);
-            }, 1500);
+            }, 2000);
         });
     }
 });
