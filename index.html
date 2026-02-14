@@ -1,248 +1,369 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html class="light" lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>#1 Hamilton Lawn Care Services | Buffalo Lawn Care Pro</title>
-    <meta name="description"
-        content="Professional Hamilton Lawn Care services including mowing, fertilization, and landscape maintenance. Serving Ancaster, Dundas, and the greater Hamilton area.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="assets/logo.png">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Buffalo Landscaping Co. | Hamilton's Premier Outdoor Architects</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
     <meta name="google-site-verification" content="YXVs3bSDBbK3pMLdnK2nw9NXI_RextM6yL3GyekkP_4" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec25",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102212",
+                        "earth-orange": "#d35400",
+                        "deep-slate": "#2c3e50",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            gap: 1rem;
+        }
+    </style>
 </head>
 
-<body>
-    <div class="custom-cursor"></div>
-
-    <header class="main-header">
-        <nav class="container nav-glass">
-            <div class="logo">
-                <img src="assets/logo.png" alt="Buffalo Lawn Care Pro">
+<body class="bg-background-light dark:bg-background-dark text-deep-slate transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-primary/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-primary p-2 rounded-lg text-deep-slate">
+                    <span class="material-symbols-outlined font-bold">landscape</span>
+                </div>
+                <span class="text-xl font-black tracking-tighter uppercase text-deep-slate">Buffalo <span
+                        class="text-primary">Landscaping</span></span>
             </div>
-            <ul class="nav-links">
-                <li><a href="#services" class="nav-link">Curation</a></li>
-                <li><a href="#transform" class="nav-link">Results</a></li>
-                <li><a href="#about" class="nav-link">Heritage</a></li>
-                <li><a href="#contact" class="luxury-cta">Inquire Now</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Hero Parallax Section -->
-        <section class="hero-parallax">
-            <div class="hero-img-container">
-                <img src="assets/hero.png" alt="Estate Lawn" id="hero-img">
+            <div class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors"
+                    href="#">Services</a>
+                <a class="text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors"
+                    href="#">Projects</a>
+                <a class="text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors"
+                    href="#">Hamilton Proud</a>
+                <a class="text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors"
+                    href="#">About</a>
             </div>
-            <div class="hero-overlay"></div>
-            <div class="container hero-content">
-                <span class="reveal">Expert Hamilton Lawn Care</span>
-                <h1 class="reveal">Professional<br><span class="luxury-font"
-                        style="color:var(--accent); font-style: italic;">Lawn Care in Hamilton</span></h1>
-                <p class="reveal">The most trusted Hamilton lawn care company. Precision mowing, fertilization, and
-                    property management for Hamilton's finest residential properties.</p>
-                <div class="hero-actions reveal">
-                    <a href="#contact" class="luxury-cta">Book Hamilton Lawn Care</a>
+            <div class="flex items-center gap-4">
+                <button
+                    class="bg-primary hover:bg-primary/90 text-deep-slate px-6 py-2.5 rounded-lg font-bold text-sm transition-all shadow-lg shadow-primary/20">
+                    GET A QUOTE
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="relative h-[90vh] flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-deep-slate/60 to-deep-slate/90 z-10"></div>
+            <img alt="Luxury landscape design" class="w-full h-full object-cover"
+                data-alt="Modern backyard patio with manicured lawn"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZw2fKc9xx8cpXyNV0SbFgUjfWVwoHKfiR105QVRRA27tlKgqkKb9Co-6-5YLjfqe4BW1-toPDHmfkzQ55onXIIKS5TcEprkCFLT_vc8Tk5zxfOOtp0Elb2w3_Hfn4Ax7ts6dobpdxSHmpI9jLBaC-EUVjYMytMm0_Fs8u8ojGVq7GrzCwdjjQ3ZnAwjOLmNfq4W5sG8S58rlkk1JHH5fTUM8Vu0JEpOOwO7RIDRAzMATwcfLhgdVtn6u8CeQBrsRPpT-qHGwGjXo" />
+        </div>
+        <div class="relative z-20 text-center px-6 max-w-5xl mx-auto">
+            <div
+                class="inline-flex items-center gap-2 bg-earth-orange text-white px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-6">
+                <span class="material-symbols-outlined text-sm">location_on</span> Hamilton's #1 Choice
+            </div>
+            <h1 class="text-5xl md:text-8xl font-black text-white leading-[0.9] tracking-tight mb-8">
+                HAMILTON'S PREMIER <br /> <span class="text-primary">OUTDOOR ARCHITECTS.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto font-medium mb-10">
+                Transforming Ontario backyards with precision, pride, and local expertise.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                    class="bg-primary text-deep-slate px-10 py-5 rounded-xl font-black text-lg hover:scale-105 transition-transform flex items-center justify-center gap-2 shadow-2xl shadow-primary/30">
+                    START YOUR PROJECT <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+                <button
+                    class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-xl font-black text-lg hover:bg-white/20 transition-all">
+                    VIEW OUR WORK
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Dynamic Service Bento Grid -->
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div class="max-w-2xl">
+                <h2 class="text-earth-orange font-black uppercase tracking-widest text-sm mb-4 italic">Craftsmanship
+                    Redefined</h2>
+                <h3 class="text-4xl md:text-6xl font-black tracking-tight leading-none text-deep-slate">BEYOND JUST
+                    MOWING. <br /> WE ARCHITECT DREAMS.</h3>
+            </div>
+            <p class="text-deep-slate/60 font-medium text-lg max-w-sm">From intricate hardscaping to lush greenery, we
+                bring a new standard of outdoor living to the Hamilton area.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[280px]">
+            <!-- Card 1: Hardscaping -->
+            <div
+                class="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-xl bg-deep-slate text-white shadow-xl">
+                <img alt="Stone patio construction"
+                    class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700"
+                    data-alt="Elegant stone walkway with landscape lighting"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW9IlQ3wnltwX1aC3zLWx7w9txw_HizcNu1_cumTTstREL3PY36cWMwCwt8Sfhcc0garJ_qXAb_Tv3cgV57FyfvoZDrQIhs1PerVigZslu-oiopop1subRvKN5CCgkMToFi4OBLfxyQoWToyqWYbCg7HMIzpaxa_BuapZwIZer3-fVtdEbauoDKFo5x2ptTk7zE1N0MBqj-gSPzI5OUmXRMLexISzJNfL_y0gORHsSj6GY8XnKzfTHgc9q-n8U5BLxrAwdk194gN4" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-deep-slate via-transparent p-8 flex flex-col justify-end">
+                    <span class="material-symbols-outlined text-primary text-5xl mb-4">architecture</span>
+                    <h4 class="text-3xl font-black mb-2 uppercase">Hardscaping</h4>
+                    <p class="text-white/70 font-medium">Custom patios, retaining walls, and functional outdoor kitchens
+                        built for Ontario winters.</p>
                 </div>
             </div>
-        </section>
-
-        <div class="container text-center">
-            <div class="stat-pill reveal">
-                <div class="stat-item">
-                    <h3 style="color:var(--accent)">127</h3>
-                    <p style="font-size: 0.7rem; text-transform: uppercase;">Estates Managed</p>
+            <!-- Card 2: Seasonal -->
+            <div
+                class="md:col-span-2 group relative overflow-hidden rounded-xl bg-primary/10 border-2 border-primary/20 p-8 flex flex-col justify-between hover:bg-primary/20 transition-colors">
+                <div class="flex justify-between items-start">
+                    <span class="material-symbols-outlined text-primary text-4xl">eco</span>
+                    <span class="bg-primary/20 text-primary font-black px-3 py-1 rounded text-[10px] uppercase">Highly
+                        Requested</span>
                 </div>
-                <div class="stat-item">
-                    <h3 style="color:var(--accent)">4.9</h3>
-                    <p style="font-size: 0.7rem; text-transform: uppercase;">Elite Rating</p>
+                <div>
+                    <h4 class="text-2xl font-black uppercase mb-1">Seasonal Cleanup</h4>
+                    <p class="text-deep-slate/60 text-sm font-bold">Spring revival and fall debris removal.</p>
                 </div>
-                <div class="stat-item">
-                    <h3 style="color:var(--accent)">10yr</h3>
-                    <p style="font-size: 0.7rem; text-transform: uppercase;">Hamilton Legacy</p>
+            </div>
+            <!-- Card 3: Sod -->
+            <div
+                class="group relative overflow-hidden rounded-xl bg-white border border-deep-slate/5 p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                <span class="material-symbols-outlined text-earth-orange text-4xl">grass</span>
+                <div>
+                    <h4 class="text-xl font-black uppercase mb-1">Sod Install</h4>
+                    <p class="text-deep-slate/60 text-sm font-bold">Instant lush green lawns.</p>
+                </div>
+            </div>
+            <!-- Card 4: Commercial -->
+            <div
+                class="group relative overflow-hidden rounded-xl bg-deep-slate text-white p-8 flex flex-col justify-between hover:bg-deep-slate/95 transition-all">
+                <span class="material-symbols-outlined text-primary text-4xl">corporate_fare</span>
+                <div>
+                    <h4 class="text-xl font-black uppercase mb-1">Commercial</h4>
+                    <p class="text-white/60 text-sm font-bold">Pro property care.</p>
                 </div>
             </div>
         </div>
-
-        <!-- Main Services Grid -->
-        <section id="services" class="services-section" style="padding: 6rem 0; background: #fff;">
-            <div class="container">
-                <div class="section-header reveal text-center">
-                    <h2>Our <span style="font-style: italic;">Hamilton Lawn Care</span> Services</h2>
-                    <p>Comprehensive maintenance plans for a perfect lawn year-round.</p>
+    </section>
+    <!-- Hamilton Proud Section -->
+    <section class="bg-deep-slate py-24">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="absolute -top-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+                <img alt="Hamilton City View" class="rounded-xl relative z-10 w-full h-[500px] object-cover"
+                    data-alt="Aerial view of Hamilton Ontario city skyline"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCVI1CPo6TOc8V7iAe72OdNVnGqI9iy8-SGUMwOiNbGsWfv0r6qhaEGUYJYma0NlFDsUWYIHN_5LGMN2UHT7APoqhALonpvnPBzxu8EbVCtDALXqul3dOftjAx_IoYvbvqlqV0tajMLead0J-ux1roTe8F-og4nNrtqoj_adOpTpOGqKtaVBSWKxCqupyMR33xg4N3sOfpbRjpXTweFkxTX5tOgmQ-HwcWCqk_QNSO2uyXDxmbA9Qgs9peqm_S7Teocr1WgskwJDQ" />
+                <div class="absolute -bottom-6 -right-6 bg-primary p-6 rounded-xl z-20 shadow-xl hidden md:block">
+                    <p class="text-deep-slate font-black text-3xl">15+ YEARS</p>
+                    <p class="text-deep-slate font-bold uppercase tracking-tighter">Serving Hamilton</p>
                 </div>
-                <div class="services-grid">
-                    <div class="service-card reveal">
-                        <h3>Lawn Cutting</h3>
-                        <p>Weekly precision mowing with manual trimming and hard-edge detailing for a golf-course
-                            finish.</p>
+            </div>
+            <div>
+                <h2 class="text-primary font-black uppercase tracking-widest text-sm mb-4">Community Focused</h2>
+                <h3 class="text-4xl md:text-5xl font-black text-white leading-tight mb-6">HAMILTON PROUD. <br />
+                    ANCASTER ROOTS.</h3>
+                <p class="text-white/70 text-lg mb-8 leading-relaxed">
+                    Buffalo Landscaping isn't just a business; we're part of the fabric of the Greater Hamilton Area.
+                    From the Escarpment to the shores of Lake Ontario, we understand the local soil, the unique climate,
+                    and what it takes to make a property stand out in our city.
+                </p>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="border-l-4 border-earth-orange pl-4">
+                        <p class="text-white font-black text-2xl">4.9/5</p>
+                        <p class="text-white/50 text-xs font-bold uppercase tracking-widest">Google Rating</p>
                     </div>
-                    <div class="service-card reveal">
-                        <h3>Garden Maintenance</h3>
-                        <p>Complete garden bed care including weeding, pruning, and seasonal flower rotations.</p>
-                    </div>
-                    <div class="service-card reveal">
-                        <h3>Sod Installation</h3>
-                        <p>Instant turf transformation with premium Kentucky Bluegrass or specialized shade blends.</p>
-                    </div>
-                    <div class="service-card reveal">
-                        <h3>Lawn Fertilizer</h3>
-                        <p>Custom liquid and granular nutrient programs specifically balanced for Hamilton soil types.
-                        </p>
-                    </div>
-                    <div class="service-card reveal">
-                        <h3>Yard Cleanup</h3>
-                        <p>Comprehensive spring and fall property cleanups including leaf removal and debris management.
-                        </p>
-                    </div>
-                    <div class="service-card reveal">
-                        <h3>Core Aeration</h3>
-                        <p>Relieving soil compaction to allow oxygen, water, and nutrients to reach the turf root zone.
-                        </p>
-                    </div>
-                    <div class="service-card reveal">
-                        <h3>Overseeding</h3>
-                        <p>Elite turf-grade seed varieties to fill in thin patches and improve lawn density.</p>
-                    </div>
-                    <div class="service-card reveal">
-                        <h3>Dethatching</h3>
-                        <p>Power raking to remove excessive organic buildup and improve water penetration.</p>
+                    <div class="border-l-4 border-primary pl-4">
+                        <p class="text-white font-black text-2xl">2.5k+</p>
+                        <p class="text-white/50 text-xs font-bold uppercase tracking-widest">Projects Done</p>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Bento Services Section -->
-        <section class="bento-section" style="background: var(--bg-light);">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2>The <span style="font-style: italic;">Curation</span></h2>
-                    <p>Exclusive services tailored for Southern Ontario's finest properties.</p>
+        </div>
+    </section>
+    <!-- Quick Estimate Form & Gallery -->
+    <section class="py-24 bg-background-light">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Form Widget -->
+                <div
+                    class="lg:col-span-1 bg-white p-8 rounded-2xl shadow-2xl border border-deep-slate/5 h-fit sticky top-28">
+                    <h4 class="text-2xl font-black uppercase text-deep-slate mb-2">Quick Estimate</h4>
+                    <p class="text-deep-slate/60 font-bold text-sm mb-8">Get a price range in minutes.</p>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-black uppercase text-deep-slate/40 mb-1">Full Name</label>
+                            <input
+                                class="w-full bg-background-light border-none rounded-lg focus:ring-2 focus:ring-primary p-3"
+                                placeholder="John Doe" type="text" />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-black uppercase text-deep-slate/40 mb-1">Phone
+                                Number</label>
+                            <input
+                                class="w-full bg-background-light border-none rounded-lg focus:ring-2 focus:ring-primary p-3"
+                                placeholder="(905) 000-0000" type="tel" />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-black uppercase text-deep-slate/40 mb-1">Service
+                                Type</label>
+                            <select
+                                class="w-full bg-background-light border-none rounded-lg focus:ring-2 focus:ring-primary p-3 font-medium">
+                                <option>Hardscaping</option>
+                                <option>Lawn Maintenance</option>
+                                <option>Landscape Lighting</option>
+                                <option>Snow Removal</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-black uppercase text-deep-slate/40 mb-1">Postal
+                                Code</label>
+                            <input
+                                class="w-full bg-background-light border-none rounded-lg focus:ring-2 focus:ring-primary p-3"
+                                placeholder="L8P 1A1" type="text" />
+                        </div>
+                        <button
+                            class="w-full bg-primary text-deep-slate font-black py-4 rounded-xl hover:bg-primary/90 transition-all shadow-xl shadow-primary/20 mt-4 uppercase">
+                            Send Request
+                        </button>
+                    </form>
                 </div>
-
-                <div class="bento-grid">
-                    <div class="bento-item bento-1 reveal">
-                        <img src="assets/mowing.png" alt="Elite Mowing">
-                        <div class="bento-overlay"></div>
-                        <div class="bento-content">
-                            <h3>Precision Striping</h3>
-                            <p>Beyond mowing. We treat your lawn like a canvas, creating perfect patterns that define
-                                your property.</p>
-                        </div>
-                    </div>
-                    <div class="bento-item bento-2 reveal">
-                        <div class="bento-overlay" style="background: var(--forest);"></div>
-                        <div class="bento-content">
-                            <h3>Organic Nutrients</h3>
-                            <p>Custom-blended fertilization programs designed for Hamilton's unique clay soil
-                                composition.</p>
-                        </div>
-                    </div>
-                    <div class="bento-item bento-3 reveal">
-                        <div class="bento-overlay" style="background: var(--primary);"></div>
-                        <div class="bento-content">
-                            <h3 style="color:var(--accent)">Aeration</h3>
-                            <p>Deep core extraction for maximum root health.</p>
-                        </div>
-                    </div>
-                    <div class="bento-item bento-4 reveal">
-                        <img src="assets/hero.png" alt="Spring Clean">
-                        <div class="bento-overlay"></div>
-                        <div class="bento-content">
-                            <h3>Seasonal Edging</h3>
-                            <p>Sharper lines, better curb appeal.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Transformation Section -->
-        <section id="transform" class="slider-section">
-            <div class="container">
-                <div class="grid-2"
-                    style="display:grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items:center; margin-bottom: 5rem;">
-                    <div class="reveal">
-                        <h2>The <span style="font-style: italic; color:var(--accent);">Metamorphosis</span></h2>
-                        <p>Witness the power of the Buffalo method. We transform neglected yards into lush, green
-                            masterpieces.</p>
-                    </div>
-                    <div class="reveal" style="text-align: right;">
-                        <a href="#contact" class="luxury-cta"
-                            style="background:transparent; border: 1px solid var(--accent); color:var(--accent)">View
-                            Gallery</a>
-                    </div>
-                </div>
-
-                <div class="comparison-container reveal" id="comparison">
-                    <div class="comparison-img img-before" style="background-image: url('assets/before.png');"></div>
-                    <div class="comparison-img img-after" id="after-img"
-                        style="background-image: url('assets/after.png'); width: 50%;"></div>
-                    <div class="slider-handle" id="handle">
-                        <div class="slider-circle">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="m15 18-6-6 6-6" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="m9 18 6-6-6-6" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" style="padding: 10rem 0;">
-            <div class="container">
-                <div class="glass-card contact-card"
-                    style="background: var(--glass-dark); color:#fff; border-radius: 60px;">
-                    <div class="grid-2" style="display:grid; grid-template-columns: 1fr 1fr; gap: 6rem;">
-                        <div class="reveal">
-                            <h2>Secure Your <span style="font-style: italic; color:var(--accent);">Position</span></h2>
-                            <p style="font-size: 1.1rem; margin-bottom: 2rem;">We only accept 10 new estate clients per
-                                season to maintain our standard of excellence.</p>
-                            <div style="display:flex; flex-direction:column; gap: 1rem;">
-                                <p><strong>L:</strong> Hamilton, Ancaster, Dundas</p>
-                                <p><strong>P:</strong> (905) 555-BUFF</p>
-                                <p><strong>E:</strong> concierge@buffalolawn.pro</p>
+                <!-- Recent Projects Gallery -->
+                <div class="lg:col-span-2">
+                    <h4 class="text-3xl font-black text-deep-slate mb-8 uppercase tracking-tighter">Recent
+                        Transformations</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="group relative aspect-square overflow-hidden rounded-xl">
+                            <img alt="Project 1"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Modern geometric stone patio with dark mulch beds"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvELuDmLBpILtmdRCL1Jj9Xl31rRSXCJY7uIys0zGgm7ERjRQjPasNDcPWRPxV2poLom5ricz53lbwvhJ_MBvu8kVp_qVYlcqFicuuiTQvLdOOuM8eJIseqDiO5BN9LPMdUQBNNpk0oLsSJh7pq2q7QnvpNwWNP6ul_NRE2EX2pkcGYRaIyskdVgdBaROLK7yNqu8Fc7qZIufBqlfrfVFUJtEvsrCALrcKTxCrblznAH-UYy5iNUzoaeEoTt0IH6GGNX3Wtw5dC10" />
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-6 flex items-end">
+                                <p class="text-white font-black uppercase">Ancaster Patio Overhaul</p>
                             </div>
                         </div>
-                        <form class="reveal" style="display:flex; flex-direction:column; gap: 2rem;">
-                            <input type="text" placeholder="Full Name"
-                                style="background:transparent; border:none; border-bottom: 1px solid rgba(255,255,255,0.2); padding: 1.5rem 0; color:#fff; font-size: 1.2rem; outline:none;">
-                            <input type="email" placeholder="Email Address"
-                                style="background:transparent; border:none; border-bottom: 1px solid rgba(255,255,255,0.2); padding: 1.5rem 0; color:#fff; font-size: 1.2rem; outline:none;">
-                            <input type="text" placeholder="Property Address"
-                                style="background:transparent; border:none; border-bottom: 1px solid rgba(255,255,255,0.2); padding: 1.5rem 0; color:#fff; font-size: 1.2rem; outline:none;">
-                            <textarea placeholder="Service Requirements"
-                                style="background:transparent; border:none; border-bottom: 1px solid rgba(255,255,255,0.2); padding: 1.5rem 0; color:#fff; font-size: 1.2rem; outline:none; height: 100px;"></textarea>
-                            <button type="submit" class="luxury-cta" style="width:fit-content; border:none;">Send
-                                Inquiry</button>
-                        </form>
+                        <div class="group relative aspect-square overflow-hidden rounded-xl">
+                            <img alt="Project 2"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Lush green turf lawn with floral border"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp7z3JanINQsGwtUxqg7F90F5hEpZ9ptEIU7YlpmwtZAeq7ItjwvagS4BFGotMYK6OZI4MCJAKk749fjgC-NAzbmxUPkvKsuE9_oFGodEko47yXsLRBRRMgalmf1ZTB8Bg0Y6lR0FGyX0rO0ittTEtCBP_nTgE7zXtAeqfiFbaOsvLeqHYSLccs9zZIhQwc5cGry4zZJSWLK9NK3lELywfoiReObbuqSL6U1JMqmQvFDMwAwfuwEKeMZm9sBtbRG83KXhsSP2uUzc" />
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-6 flex items-end">
+                                <p class="text-white font-black uppercase">Stoney Creek Sodding</p>
+                            </div>
+                        </div>
+                        <div class="md:col-span-2 group relative h-64 overflow-hidden rounded-xl">
+                            <img alt="Project 3"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Retaining wall and garden bed installation"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOTthER5eOSmkIEUIzUCquCFMLz3TBi7-iBR8oA4rOSkanG_nF8U5TbHlbtqXXF33toWKRAEvWaXV-ynXT1NFgltfK3svacqFZwUxl8o7N3NXnJUmolsakSGG5JC91Z-xhWxEBnv38EoLTkTPVtdCUHnb1zboG1UHrIFmaGrDJhI-Tqvvwx3erYalrMjEUjBRXf9jL4P1c1txDzWiieeEEYNoaQIsMBrlskXGqTkg_0FlBZirKNSnaqoNaOfmglpvpXy9eQ6o_4QY" />
+                            <div
+                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-6 flex items-end">
+                                <p class="text-white font-black uppercase">Dundas Retaining Wall</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <footer
-        style="background: var(--primary); color:#fff; padding: 5rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
-        <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
-            <img src="assets/logo.png" alt="Buffalo Lawn Care Pro"
-                style="height:40px; filter: brightness(0) invert(1);">
-            <p>&copy; 2026 Buffalo Lawn Care Pro. Estate Management in Hamilton, ON.</p>
-            <div style="display:flex; gap: 2rem;">
-                <a href="#" class="nav-link" style="color:rgba(255,255,255,0.5)">Instagram</a>
-                <a href="#" class="nav-link" style="color:rgba(255,255,255,0.5)">LinkedIn</a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-deep-slate text-white pt-20 pb-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="bg-primary p-2 rounded-lg text-deep-slate">
+                            <span class="material-symbols-outlined font-bold">landscape</span>
+                        </div>
+                        <span class="text-2xl font-black tracking-tighter uppercase">Buffalo Landscaping</span>
+                    </div>
+                    <p class="text-white/50 font-medium max-w-sm mb-8">
+                        The Buffalo Guarantee: If you're not absolutely thrilled with your new outdoor space, we'll make
+                        it right. No questions asked.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">public</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">alternate_email</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-lg font-black uppercase mb-6 text-primary">Services</h5>
+                    <ul class="space-y-4 text-white/50 font-bold text-sm">
+                        <li><a class="hover:text-white transition-colors" href="#">Interlock Patios</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Garden Design</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Lawn Care</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Winter Snow Prep</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-black uppercase mb-6 text-primary">Contact</h5>
+                    <ul class="space-y-4 text-white/50 font-bold text-sm">
+                        <li class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-earth-orange text-sm">phone</span> (905) 555-0123
+                        </li>
+                        <li class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-earth-orange text-sm">mail</span>
+                            hello@buffalolandscape.ca</li>
+                        <li class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-earth-orange text-sm">location_on</span> Hamilton,
+                            ON</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-10 flex flex-col md:row justify-between items-center gap-4">
+                <p class="text-xs font-black text-white/30 uppercase tracking-widest">© 2024 Buffalo Landscaping Co. All
+                    rights reserved.</p>
+                <div class="flex items-center gap-2">
+                    <span
+                        class="bg-white/10 px-4 py-1 rounded text-[10px] font-black uppercase tracking-tighter">Hamilton
+                        Small Business Member</span>
+                </div>
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 
 </html>
