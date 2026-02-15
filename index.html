@@ -5,7 +5,111 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Buffalo Landscaping Co. | Hamilton's Premier Outdoor Architects</title>
+    <title>Landscaping Company in Hamilton, ON | Buffalo Landscaping Co.</title>
+    <meta name="description"
+        content="Professional landscaping services in Hamilton. Design, installation & maintenance for residential and commercial properties. Free estimates – call today.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Buffalo Landscaping Co.",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBZw2fKc9xx8cpXyNV0SbFgUjfWVwoHKfiR105QVRRA27tlKgqkKb9Co-6-5YLjfqe4BW1-toPDHmfkzQ55onXIIKS5TcEprkCFLT_vc8Tk5zxfOOtp0Elb2w3_Hfn4Ax7ts6dobpdxSHmpI9jLBaC-EUVjYMytMm0_Fs8u8ojGVq7GrzCwdjjQ3ZnAwjOLmNfq4W5sG8S58rlkk1JHH5fTUM8Vu0JEpOOwO7RIDRAzMATwcfLhgdVtn6u8CeQBrsRPpT-qHGwGjXo",
+      "@id": "https://buffalolandscape.ca",
+      "url": "https://buffalolandscape.ca",
+      "telephone": "(905) 555-0123",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hamilton Main St",
+        "addressLocality": "Hamilton",
+        "addressRegion": "ON",
+        "postalCode": "L8P 1A1",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.2557,
+        "longitude": -79.8711
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/buffalolandscaping",
+        "https://www.instagram.com/buffalolandscaping"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Landscaping Services",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Buffalo Landscaping Co."
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Hamilton"
+        },
+        {
+          "@type": "City",
+          "name": "Ancaster"
+        },
+        {
+          "@type": "City",
+          "name": "Dundas"
+        },
+        {
+          "@type": "City",
+          "name": "Stoney Creek"
+        },
+        {
+          "@type": "City",
+          "name": "Burlington"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Landscaping Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Landscape Design"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Interlock Installation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Lawn Maintenance"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    <meta name="google-site-verification" content="YXVs3bSDBbK3pMLdnK2nw9NXI_RextM6yL3GyekkP_4" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet" />
@@ -14,7 +118,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <meta name="google-site-verification" content="YXVs3bSDBbK3pMLdnK2nw9NXI_RextM6yL3GyekkP_4" />
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -73,13 +176,13 @@
             </div>
             <div class="hidden md:flex items-center gap-10">
                 <a class="text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors"
-                    href="#">Services</a>
+                    href="#services">Services</a>
                 <a class="text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors"
-                    href="#">Projects</a>
+                    href="#projects">Projects</a>
                 <a class="text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors"
-                    href="#">Hamilton Proud</a>
+                    href="#why-us">Why Us</a>
                 <a class="text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors"
-                    href="#">About</a>
+                    href="#service-areas">Service Areas</a>
             </div>
             <div class="flex items-center gap-4">
                 <button
@@ -102,11 +205,14 @@
                 class="inline-flex items-center gap-2 bg-earth-orange text-white px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-6">
                 <span class="material-symbols-outlined text-sm">location_on</span> Hamilton's #1 Choice
             </div>
-            <h1 class="text-5xl md:text-8xl font-black text-white leading-[0.9] tracking-tight mb-8">
-                HAMILTON'S PREMIER <br /> <span class="text-primary">OUTDOOR ARCHITECTS.</span>
+            <h1 class="text-5xl md:text-8xl font-black text-white leading-[0.9] tracking-tight mb-8 uppercase">
+                Hamilton's Full-Service <br /> <span class="text-primary">Landscaping Company.</span>
             </h1>
             <p class="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto font-medium mb-10">
-                Transforming Ontario backyards with precision, pride, and local expertise.
+                Experience the best landscaping in Hamilton and surrounding areas. Buffalo Landscaping Co. provides
+                professional design, expert installation, and reliable maintenance services to transform your outdoor
+                living space. From custom interlock patios to lush garden beds, we deliver high-quality craftsmanship
+                that enhances your property's value and beauty.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
@@ -121,13 +227,13 @@
         </div>
     </section>
     <!-- Dynamic Service Bento Grid -->
-    <section class="py-24 px-6 max-w-7xl mx-auto">
+    <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div class="max-w-2xl">
                 <h2 class="text-earth-orange font-black uppercase tracking-widest text-sm mb-4 italic">Craftsmanship
                     Redefined</h2>
-                <h3 class="text-4xl md:text-6xl font-black tracking-tight leading-none text-deep-slate">BEYOND JUST
-                    MOWING. <br /> WE ARCHITECT DREAMS.</h3>
+                <h2 class="text-4xl md:text-6xl font-black tracking-tight leading-none text-deep-slate uppercase">OUR
+                    LANDSCAPING <br /> SERVICES.</h2>
             </div>
             <p class="text-deep-slate/60 font-medium text-lg max-w-sm">From intricate hardscaping to lush greenery, we
                 bring a new standard of outdoor living to the Hamilton area.</p>
@@ -182,7 +288,7 @@
         </div>
     </section>
     <!-- Hamilton Proud Section -->
-    <section class="bg-deep-slate py-24">
+    <section id="why-us" class="bg-deep-slate py-24">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div class="relative">
                 <div class="absolute -top-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
@@ -196,12 +302,13 @@
             </div>
             <div>
                 <h2 class="text-primary font-black uppercase tracking-widest text-sm mb-4">Community Focused</h2>
-                <h3 class="text-4xl md:text-5xl font-black text-white leading-tight mb-6">HAMILTON PROUD. <br />
-                    ANCASTER ROOTS.</h3>
+                <h2 class="text-4xl md:text-5xl font-black text-white leading-tight mb-6 uppercase">WHY HAMILTON <br />
+                    HOMEOWNERS CHOOSE US.</h2>
                 <p class="text-white/70 text-lg mb-8 leading-relaxed">
                     Buffalo Landscaping isn't just a business; we're part of the fabric of the Greater Hamilton Area.
                     From the Escarpment to the shores of Lake Ontario, we understand the local soil, the unique climate,
-                    and what it takes to make a property stand out in our city.
+                    and what it takes to make a property stand out in our city. Our years of local experience ensure
+                    that your project is built to last through every Ontario season.
                 </p>
                 <div class="grid grid-cols-2 gap-6">
                     <div class="border-l-4 border-earth-orange pl-4">
@@ -217,13 +324,13 @@
         </div>
     </section>
     <!-- Quick Estimate Form & Gallery -->
-    <section class="py-24 bg-background-light">
+    <section id="quote" class="py-24 bg-background-light">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
                 <!-- Form Widget -->
                 <div
                     class="lg:col-span-1 bg-white p-8 rounded-2xl shadow-2xl border border-deep-slate/5 h-fit sticky top-28">
-                    <h4 class="text-2xl font-black uppercase text-deep-slate mb-2">Quick Estimate</h4>
+                    <h2 class="text-2xl font-black uppercase text-deep-slate mb-2">Get Your Free Landscaping Quote</h2>
                     <p class="text-deep-slate/60 font-bold text-sm mb-8">Get a price range in minutes.</p>
                     <form class="space-y-4">
                         <div>
@@ -264,9 +371,9 @@
                     </form>
                 </div>
                 <!-- Recent Projects Gallery -->
-                <div class="lg:col-span-2">
-                    <h4 class="text-3xl font-black text-deep-slate mb-8 uppercase tracking-tighter">Recent
-                        Transformations</h4>
+                <div id="projects" class="lg:col-span-2">
+                    <h2 class="text-3xl font-black text-deep-slate mb-8 uppercase tracking-tighter">RECENT PROJECTS IN
+                        HAMILTON</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="group relative aspect-square overflow-hidden rounded-xl">
                             <img alt="Project 1"
@@ -298,6 +405,93 @@
                                 <p class="text-white font-black uppercase">Dundas Retaining Wall</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- What Our Clients Say -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl md:text-6xl font-black text-deep-slate mb-16 text-center uppercase">What Our Clients Say
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-background-light p-8 rounded-2xl border border-deep-slate/5">
+                    <div class="flex text-primary mb-4">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                    </div>
+                    <p class="text-deep-slate/70 font-medium mb-6 italic">"Buffalo Landscaping transformed our messy
+                        backyard into a beautiful patio oasis. Professional team and exceptional attention to detail!"
+                    </p>
+                    <p class="font-black uppercase text-sm">Sarah J. - Ancaster</p>
+                </div>
+                <div class="bg-background-light p-8 rounded-2xl border border-deep-slate/5">
+                    <div class="flex text-primary mb-4">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                    </div>
+                    <p class="text-deep-slate/70 font-medium mb-6 italic">"The best landscaping company in Hamilton.
+                        They were on time, within budget, and the final result exceeded our expectations."</p>
+                    <p class="font-black uppercase text-sm">Mark T. - Dundas</p>
+                </div>
+                <div class="bg-background-light p-8 rounded-2xl border border-deep-slate/5">
+                    <div class="flex text-primary mb-4">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                    </div>
+                    <p class="text-deep-slate/70 font-medium mb-6 italic">"We've used them for both design and ongoing
+                        maintenance. Reliable service and very knowledgeable about local plants."</p>
+                    <p class="font-black uppercase text-sm">David R. - Stoney Creek</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Service Areas -->
+    <section id="service-areas" class="py-24 bg-deep-slate text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-black mb-8 uppercase">Service Areas</h2>
+                    <p class="text-white/70 text-lg mb-8">We proudly serve residential and commercial properties
+                        throughout the Greater Hamilton Area and surrounding communities.</p>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-primary font-black uppercase mb-4">Hamilton Neighbourhoods</h3>
+                            <ul class="space-y-2 text-white/50 font-bold text-sm">
+                                <li>Westdale</li>
+                                <li>Locke Street</li>
+                                <li>Mount Hope</li>
+                                <li>Binbrook</li>
+                                <li>Waterdown</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-primary font-black uppercase mb-4">Surrounding Cities</h3>
+                            <ul class="space-y-2 text-white/50 font-bold text-sm">
+                                <li>Ancaster</li>
+                                <li>Dundas</li>
+                                <li>Stoney Creek</li>
+                                <li>Burlington</li>
+                                <li>Grimsby</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
+                    <img alt="Map of Hamilton" class="w-full h-full object-cover grayscale opacity-50"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCVI1CPo6TOc8V7iAe72OdNVnGqI9iy8-SGUMwOiNbGsWfv0r6qhaEGUYJYma0NlFDsUWYIHN_5LGMN2UHT7APoqhALonpvnPBzxu8EbVCtDALXqul3dOftjAx_IoYvbvqlqV0tajMLead0J-ux1roTe8F-og4nNrtqoj_adOpTpOGqKtaVBSWKxCqupyMR33xg4N3sOfpbRjpXTweFkxTX5tOgmQ-HwcWCqk_QNSO2uyXDxmbA9Qgs9peqm_S7Teocr1WgskwJDQ" />
+                    <div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-6xl text-white animate-bounce">location_on</span>
                     </div>
                 </div>
             </div>
